@@ -5,9 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 public class Department {
     @Id
@@ -16,4 +18,11 @@ public class Department {
 
     @Column(nullable = false, unique = true, length = 100)
     private String name;
+
+    @OneToOne
+    @JoinColumn(nullable = false)
+    private Doctor headDoctor;
+
+    @ManyToMany
+    private Set<Doctor> doctors = new HashSet<>();
 }

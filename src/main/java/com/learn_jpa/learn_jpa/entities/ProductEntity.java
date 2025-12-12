@@ -12,9 +12,9 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 @Entity
 @Table(name = "product_table",
         uniqueConstraints = {
@@ -44,6 +44,4 @@ public class ProductEntity {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
-
-
 }

@@ -5,9 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 public class Doctor {
     @Id
@@ -22,4 +24,7 @@ public class Doctor {
 
     @Column(nullable = false, unique = true, length = 100)
     private String email;
+
+    @OneToMany(mappedBy = "doctor")
+    private Set<Appointment> appointments = new HashSet<>();
 }

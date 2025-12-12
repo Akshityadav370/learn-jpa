@@ -17,4 +17,12 @@ public class Appointment {
 
     @Column(length = 500)
     private String reason;
+
+    @ManyToOne // owning side
+    @JoinColumn(nullable = false)
+    private Patient patient;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Doctor doctor;
 }

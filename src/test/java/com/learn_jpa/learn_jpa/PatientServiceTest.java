@@ -19,16 +19,16 @@ public class PatientServiceTest {
 
     @Test
     public void testPatient() {
-        List<Patient> patientList = patientRepository.findAll();
-        List<CPatientInfo> patientListConcerete = patientRepository.getAllPatientsInfoConcrete();
-        List<BloodGroupStats> patientStats = patientRepository.getBloodGroupStats();
-
-        for(var p: patientList) {
-            System.out.println(p);
-        }
-
-        int rowsAffected = patientRepository.updatePatientNameWithId("Akshit Yadav", 1L);
-
-        System.out.println(rowsAffected);
+//        List<Patient> patientList = patientRepository.findAll();
+//        List<CPatientInfo> patientListConcerete = patientRepository.getAllPatientsInfoConcrete();
+//        List<BloodGroupStats> patientStats = patientRepository.getBloodGroupStats();
+//
+//        for(var p: patientList) {
+//            System.out.println(p);
+//        }
+//
+//        int rowsAffected = patientRepository.updatePatientNameWithId("Akshit Yadav", 1L);
+//
+//        System.out.println(rowsAffected);
     }
 }

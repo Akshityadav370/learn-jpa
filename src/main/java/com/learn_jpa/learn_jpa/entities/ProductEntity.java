@@ -44,4 +44,6 @@ public class ProductEntity {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+
 }
